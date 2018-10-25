@@ -8,6 +8,7 @@ class Application
 
       if item = @@items.detect { |item| item.name == item_name }
         resp.write "#{item_name} cost #{item.price}"
+        binding.pry
       else
         resp.write "Item not found"
         resp.status = 400
